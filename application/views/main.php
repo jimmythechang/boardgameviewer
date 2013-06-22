@@ -3,6 +3,7 @@
     <head>
         <title>Peruse a Game</title>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="/assets/css/style.css" rel="stylesheet"/>
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
     </head>
@@ -16,15 +17,24 @@
                     But here are three I managed to smuggle across state lines.
                 </p>
             </div>
-            <div class="row">
+            <ul class="thumbnails">
                 <?php foreach ($boardgames as $boardgame) { ?>
-                    <div class="span4">
-                        <?php echo $boardgame->name; ?>
-                        <img src="/assets/img/<?php echo $boardgame->filename; ?>"/>
-                    </div>
+                    <li class="span4">
+                        <a href="#">
+                        <div class="thumbnail">
+                            
+                            <img src="/assets/img/<?php echo $boardgame->filename; ?>"/>
+                            
+                            <div class="caption">
+                                <h3><?php echo $boardgame->name; ?></h3>
+                            </div>
+                        
+                        </div>
+                        </a>
+                    </li>
                 <?php } ?>
                 
-            </div>
+            </ul>
         </div>
     </body>
 </html>

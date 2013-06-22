@@ -1,0 +1,18 @@
+/* 
+    Document   : style
+    Created on : Jun 21, 2013, 9:03:21 PM
+    Author     : Jimmy
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* Styling for the main page. */
+
+.thumbnail a {
+
+}
+
+.thumbnail img {
+    height: 250px;
+}
+
