@@ -17,12 +17,12 @@
                 </p>
             </div>
             <div class="row">
-                <div class="span4">
-                </div>
-                <div class="span4">
-                </div>
-                <div class="span4">
-                </div>
+                <?php foreach ($boardgames as $boardgame) { ?>
+                    <div class="span4">
+                        <?php echo $boardgame->name; ?>
+                    </div>
+                <?php } ?>
+                
             </div>
         </div>
     </body>
