@@ -10,7 +10,7 @@ class Controller_Main extends Controller {
     {
         $view = View::factory('gameselect');
 
-        // Retrieve the boardgames available (I've only inserted three).
+        // Retrieve the boardgames available (I've only created three).
         $boardgames = ORM::factory('boardgame')->limit(3)->find_all();
         $view->boardgames = $boardgames;
 

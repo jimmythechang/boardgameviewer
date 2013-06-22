@@ -20,6 +20,7 @@
                 <?php foreach ($boardgames as $boardgame) { ?>
                     <div class="span4">
                         <?php echo $boardgame->name; ?>
+                        <img src="/assets/img/<?php echo $boardgame->filename; ?>"/>
                     </div>
                 <?php } ?>
                 
