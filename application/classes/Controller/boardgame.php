@@ -9,7 +9,12 @@ class Controller_Boardgame extends Controller {
     public function action_view()
     {
         $id = $this->request->param();
-        $boardgame = ORM::factory('boardgame')->where('id', '=', $id);
+        $boardgame = ORM::factory('boardgame')->where('id', '=', $id)->find();
+
+        $view = View::factory('boardgame');
+        $view->boardgame = $boardgame;
+
+        $this->response->body($view);
     }
 }
 ?>

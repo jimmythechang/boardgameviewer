@@ -8,8 +8,8 @@
 
 /* Styling for the main page. */
 
-.thumbnail a {
-
+.container {
+    margin-top: 20px;
 }
 
 .thumbnail img {
