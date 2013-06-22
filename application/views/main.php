@@ -1,5 +1,5 @@
 <?php echo View::factory('header'); ?>
-    <div class="container">
+    <div id="main" class="container">
         <div class="hero-unit">
             <h1>I love boardgames.</h1>
             <p>

@@ -2,17 +2,44 @@
     Document   : style
     Created on : Jun 21, 2013, 9:03:21 PM
     Author     : Jimmy
-    Description:
-        Purpose of the stylesheet follows.
 */
 
-/* Styling for the main page. */
+/* Sitewide */
 
 .container {
     margin-top: 20px;
 }
 
-.thumbnail img {
+input[type="text"] {
+    height: 38.5px;
+    font-size: 38.5px;
+}
+
+/* Main Page */
+
+#main .thumbnail img {
     height: 250px;
 }
+
+/* Boardgame Page */
+
+#gameNameContainer h1 {
+    display: inline;
+}
+
+#gameNameContainer .editButton {
+    display: none;
+    vertical-align: 10px;
+}
+
+#gameDescriptionContainer {
+    margin-top: 20px;
+}
+
+#gameDescriptionContainer .editButton {
+    display: none;
+}
+
+
+
 
