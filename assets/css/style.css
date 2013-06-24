@@ -19,7 +19,7 @@ body {
 }
 
 .hero-unit {
-    background-color: #000;
+    background-color: #583D3D;
     color: #fff;
     margin-bottom: 20px;
 }
@@ -42,7 +42,7 @@ input[type="text"] {
 /* Main Page */
 
 #main .thumbnail {
-    background-color: #000;
+    background-color: #583D3D;
     border: none;
 }
 
@@ -68,7 +68,7 @@ input[type="text"] {
 }
 
 #boardgameView {
-    background-color: #000;
+    background-color: #583D3D;
     color: #fff;
     padding: 20px;
     -webkit-border-radius: 6px;
