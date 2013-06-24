@@ -9,12 +9,18 @@ class Controller_Boardgame extends Controller {
     public function action_view()
     {
         $id = $this->request->param();
-        $boardgame = ORM::factory('boardgame')->where('id', '=', $id)->find();
+        $boardgame = new Model_Boardgame($this->request->param('id'));
+
+        if ( ! $boardgame->loaded() )
+        {
+            HTTP::redirect('/404');
+        }
 
         $view = View::factory('boardgame');
         $view->boardgame = $boardgame;
 
         $this->response->body($view);
     }
+
 }
 ?>

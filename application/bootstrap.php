@@ -91,6 +91,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  */
 Kohana::init(array(
 	'base_url'   => 'http://gameviewer.local.com',
+        'index_file'    => FALSE
 ));
 
 /**
@@ -125,9 +126,15 @@ Kohana::modules(array(
 
 Route::set('boardgame', 'boardgame(/<action>(/<id>))')
         ->defaults(array(
-                'controller'=> 'boardgame',
-                'action'    => 'view',
-                'id'        => '1',
+                'controller'    => 'boardgame',
+                'action'        => 'view',
+                'id'            => '1',
+        ));
+
+Route::set('boardgame', '404')
+        ->defaults(array(
+                'controller'    => 'main',
+                'action'        => '404',
         ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
