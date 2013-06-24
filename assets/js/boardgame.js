@@ -52,7 +52,8 @@ function bindEditClicks()
     );
 }
 
-// Saves any edits to a field.
+// Triggers an AJAX POST, and passes up
+// new field data to be saved.
 
 function bindSaveClicks()
 {
@@ -64,9 +65,6 @@ function bindSaveClicks()
             var text = $(this).siblings('.editText').val();
 
             var that = $(this);
-
-            // Asynchronously save the new information for the
-            // edited field.
             
             $.ajax({
                     url: "/boardgame/save/" + id,
