@@ -1,11 +1,14 @@
-$(document).ready(function() {
+$(document).ready(function() 
+{
     bindEditHovers();
     bindEditClicks();
+    bindSaveClicks();
 });
 
 // Displays an Edit button when an editable div is hovered over.
 
-function bindEditHovers() {
+function bindEditHovers()
+{
     $('.editable').hover(
         function()
         {
@@ -24,7 +27,10 @@ function bindEditHovers() {
     );
 }
 
-function bindEditClicks() {
+// Displays the editable sections when the Edit button is clicked.
+
+function bindEditClicks()
+{
     $('.editButton').click(
         function()
         {
@@ -45,11 +51,35 @@ function bindEditClicks() {
     );
 }
 
-function bindSaveClicks() {
+function bindSaveClicks()
+{
     $('.saveButton').click(
         function()
         {
-            
+            var id = $('#boardgameId').val();
+            var field = $(this).siblings('.field').val();
+            var text = $(this).siblings('.editText').val();
+
+            // Asynchronously save the new information for the
+            // edited field.
+            $.ajax({
+                    url: "/boardgame/save/" + id,
+                    type: "POST",
+                    data: {
+                            field: field,
+                            text: text
+                          }
+                   }
+            ).done( function()
+                    {
+                      
+                    }
+            ).fail( function(data)
+                    {
+                        console.log(data);
+                        alert("Unable to update boardgame!");
+                    }
+            );
         }
     );
 }

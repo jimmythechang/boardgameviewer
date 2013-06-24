@@ -11,6 +11,7 @@
                     <div class="editSection hidden">
                         <input type="text" class="editText"/>
                         <input type="button" value="Save" class="saveButton btn btn-primary"/>
+                        <input type="hidden" value="name" class="field"/>
                     </div>
                 </div>
                 <div id="gameDescriptionContainer" class="editable">
@@ -19,9 +20,11 @@
                     <div class="editSection hidden">
                         <textarea class="editText" cols="10" rows="5"></textarea>
                         <input type="button" value="Save" class="saveButton btn btn-primary"/>
+                        <input type="hidden" value="description" class="field"/>
                     </div>
                 </div>
             </div>
         </div>
+        <input id="boardgameId" type="hidden" value="<?php echo $boardgame->id; ?>"/>
     </div>
 <?php echo View::factory('footer'); ?>
