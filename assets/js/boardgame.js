@@ -52,6 +52,8 @@ function bindEditClicks()
     );
 }
 
+// Saves any edits to a field.
+
 function bindSaveClicks()
 {
     $('.saveButton').click(
@@ -88,7 +90,7 @@ function bindSaveClicks()
             ).fail( function(data)
                     {
                         console.log(data);
-                        alert("Unable to update boardgame!");
+                        alert("Unable to update board game!");
                     }
             );
         }

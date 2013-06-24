@@ -1,4 +1,5 @@
 <?php echo View::factory('header'); ?>
+
     <div id="boardgameView" class="container">
         <div class="row">
             <div class="span4">
@@ -27,4 +28,5 @@
         </div>
         <input id="boardgameId" type="hidden" value="<?php echo $boardgame->id; ?>"/>
     </div>
+
 <?php echo View::factory('footer'); ?>

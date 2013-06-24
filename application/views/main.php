@@ -1,7 +1,7 @@
 <?php echo View::factory('header'); ?>
     <div id="main" class="container">
         <div class="hero-unit">
-            <h1>I love boardgames.</h1>
+            <h1>I love board games.</h1>
             <p>
                 At the moment, my collection isn't what it used to be.
                 (There's only so much space in a Honda Fit.)
