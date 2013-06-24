@@ -40,6 +40,7 @@ function bindEditClicks()
             // Indicate that we're currently editing the div,
             // so that the Edit button isn't displayed
             // again on hover.
+            
             $(editable).addClass('editing');
 
             $(this).hide().addClass('hidden');
@@ -60,8 +61,11 @@ function bindSaveClicks()
             var field = $(this).siblings('.field').val();
             var text = $(this).siblings('.editText').val();
 
+            var that = $(this);
+
             // Asynchronously save the new information for the
             // edited field.
+            
             $.ajax({
                     url: "/boardgame/save/" + id,
                     type: "POST",
@@ -72,7 +76,14 @@ function bindSaveClicks()
                    }
             ).done( function()
                     {
-                      
+                        // Hide the input area, and show the original
+                        // text sections with updated values.
+                        
+                        var editable = $(that).parents('.editable');
+                        $('.text', editable).text(text).show();
+                        $('.editSection', editable).addClass('hidden');
+
+                        $(editable).removeClass('editing');
                     }
             ).fail( function(data)
                     {
