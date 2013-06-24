@@ -17,7 +17,7 @@ class Controller_Boardgame extends Controller {
 
         if ( ! $boardgame->loaded() )
         {
-            HTTP::redirect('/404');
+            HTTP::redirect('/notfound');
         }
 
         $view = View::factory('boardgame');

@@ -17,9 +17,9 @@ class Controller_Main extends Controller {
         $this->response->body($view);
     }
 
-    public function action_404()
+    public function action_notfound()
     {
-        $this->response->body(View::factory('404'));
+        $this->response->body(View::factory('notfound'));
     }
 }
 ?>

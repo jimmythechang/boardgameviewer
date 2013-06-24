@@ -131,10 +131,11 @@ Route::set('boardgame', 'boardgame(/<action>(/<id>))')
                 'id'            => '1',
         ));
 
-Route::set('boardgame', '404')
+
+Route::set('notfound', 'notfound')
         ->defaults(array(
                 'controller'    => 'main',
-                'action'        => '404',
+                'action'        => 'notfound',
         ));
 
 Route::set('default', '(<controller>(/<action>(/<id>)))')
