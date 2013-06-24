@@ -1,4 +1,10 @@
-<?php
+<?php defined('SYSPATH') OR die('No direct access allowed.');
+
+/**
+ * Controller for a Boardgame; takes POST data from
+ * the page and signals the Model to update its data
+ * accordingly.
+ */
 
 class Controller_Boardgame extends Controller {
     
@@ -20,19 +26,21 @@ class Controller_Boardgame extends Controller {
         $this->response->body($view);
     }
 
+    // Signal to the model that some new data must be saved.
+    
     public function action_save() {
         if (HTTP_Request::POST == $this->request->method()) {
             $boardgame = new Model_Boardgame($this->request->param('id'));
+
             $field = $this->request->post('field');
-            
+            $text = $this->request->post('text');
+
             if ($field == 'name') {
-                $boardgame->name = $this->request->post('text');
+                $boardgame->set_name($text);
             }
             elseif ($field == 'description') {
-                $boardgame->description = $this->request->post('text');
+                $boardgame->set_description($text);
             }
-
-            $boardgame->save();
         }
     }
 

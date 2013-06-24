@@ -2,8 +2,6 @@
 
 /**
  * Model for a Boardgame.
- *
- * @author James
  */
 class Model_Boardgame extends ORM {
     public function rules()
@@ -16,6 +14,16 @@ class Model_Boardgame extends ORM {
                 array('not_empty'),
             )
         );
+    }
+
+    public function set_name($name) {
+        $this->name = $name;
+        $this->save();
+    }
+
+    public function set_description($description) {
+        $this->description = $description;
+        $this->save();
     }
 }
 ?>
