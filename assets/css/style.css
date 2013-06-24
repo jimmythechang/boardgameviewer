@@ -6,8 +6,22 @@
 
 /* Sitewide */
 
+body {
+  background: url(/assets/img/TypefaceScrabble.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .container {
     margin-top: 20px;
+}
+
+.hero-unit {
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 20px;
 }
 
 input[type="text"] {
@@ -18,8 +32,18 @@ input[type="text"] {
 
 /* Main Page */
 
+#main .thumbnail {
+    background-color: #000;
+    border: none;
+}
+
 #main .thumbnail img {
+    margin-top: 10px;
     height: 250px;
+}
+
+#main .thumbnail h3 {
+    color: #fff;
 }
 
 /* Boardgame Page */
